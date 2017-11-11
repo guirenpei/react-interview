@@ -1,0 +1,83 @@
+.contact-wrapper {
+  margin-top: 80px;
+  margin-bottom: 90px;
+  background-color: #fff;
+  position: relative;
+  height: 100%;
+  z-index: 6;
+  padding: 0 24px;
+  p a:hover {
+    text-decoration: underline;
+  }
+  .phone {
+    font-size: 16px;
+    line-height: 17px;
+    font-weight: 600;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  header {
+    h4 {
+      margin-top: 0;
+    }
+  }
+  .contact-form {
+    overflow: hidden;
+    margin-top: 43px;
+    label {
+      font-weight: 300;
+      font-size: 14px;
+      width: 100%;
+      max-width: 315px;
+      float: left;
+      margin-bottom: 57px;
+      & + label {
+        float: right;
+      }
+      & + label + div + label {
+        float: none;
+        max-width: 100%;
+        margin-bottom: 43px;
+      }
+      span {
+        color: #fb5353;
+      }
+    }
+    input, textarea {
+      background-color: inherit;
+      border: none;
+      border-bottom: 1px solid #eeeeee;
+      display: block;
+      width: 100%;
+      padding: 0 10px;
+      outline: none;
+    }
+    input:focus, textarea:focus {
+      border-bottom-color: #404040;
+    }
+    input[type="submit"] {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      width: 128px;
+      height: 48px;
+      border-radius: 5px;
+      line-height: 48px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #FFF;
+      line-height: 47px;
+      background-color: #fb5353;
+      padding: 0 29px;
+      &:hover {
+        background-color: #222222;
+      }
+    }
+  }
+}
+.error_message{
+  color: #e84d49;
+}

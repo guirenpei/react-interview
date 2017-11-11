@@ -1,0 +1,18 @@
+import "babel-polyfill";
+import axios from 'axios';
+
+axios.defaults.baseURL = 'http://localhost:2366';
+
+export async function all() {
+  return await axios({
+    url: '/image/all',
+    method: 'get',
+  }).then((res) => res.data);
+}
+
+export async function loadmore(current) {
+  return await axios({
+    url: `/image/loadmore?current=${current}`,
+    method: 'get',
+  }).then((res) => res.data);
+}

@@ -1,0 +1,224 @@
+/* ==========================================================================
+
+	Header styles
+
+========================================================================== */
+.header {
+  padding-top: 22px;
+  padding-bottom: 3px;
+  hgroup {
+    padding: 0 15px;
+    overflow: hidden;
+    h1 {
+      margin: 0;
+      padding: 0;
+      color: #343434;
+      a {
+        display: block;
+        float: left;
+        max-width: 81px;
+        color: #343434;
+        font-size: 22px;
+      }
+    }
+    nav {
+      .menu-expanded {
+        .nav-icon {
+          float: right;
+          font-family: 'Oranienbaum', serif;
+          display: block;
+          position: relative;
+          text-transform: uppercase;
+          font-size: 14px;
+          letter-spacing: 4px;
+          color: #222222;
+          .over {
+            transform: scale(100);
+            transition: all 0.35s ease-in;
+            cursor: default;
+          }
+          .menu {
+            transition: all .4s ease-out;
+            width: 60px;
+            height: 30px;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 5;
+            border-radius: 100%;
+            &.over {
+              background-color: rgba(255, 255, 255, 0.8);
+            }
+          }
+          p {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-image: url('../../../../dist/images/pic/nav.png');
+            background-repeat: no-repeat;
+            background-position: 0 5px;
+            padding-left: 11px;
+          }
+        }
+        .cross {
+          .linee {
+            cursor: pointer;
+            &.overL1 {
+              animation: closetop 1s forwards;
+              animation-direction: alternate;
+              cursor: pointer;
+            }
+            &.overL2 {
+              opacity: 0;
+              transition: opacity 0.5s;
+              cursor: pointer;
+            }
+            &.overL3 {
+              animation: closebottom 1s forwards;
+              animation-direction: alternate;
+              cursor: pointer;
+            }
+            &.linea1 {
+              background: #222222;
+              height: 2px;
+              width: 15px;
+              position: absolute;
+              right: 33px;
+              top: 33px;
+              z-index:90;
+              transition: all 0.3s;
+              opacity:0
+            }
+            &.linea1.overL1, &.linea3.overL3 {
+              opacity: 1;
+            }
+            &.linea2 {
+              background: #222222;
+              height: 2px;
+              width: 15px;
+              position: absolute;
+              right: 33px;
+              top: 38px;
+              opacity: 1;
+              transition: opacity 0.5s;
+              z-index:90;
+              opacity:0;
+            }
+            &.linea3 {
+              background: #222222;
+              height: 2px;
+              width: 15px;
+              position: absolute;
+              right: 33px;
+              top: 43px;
+              z-index:90;
+              opacity:0;
+            }
+          }
+        }
+        .main-menu {
+          background-color: transparent;
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          top: 0px;
+          right: 0px;
+          z-index: 2;
+          visibility: hidden;
+          text-align: center;
+          opacity: 0;
+          transition: all 0.300s;
+          transition-delay: 0s;
+          &.overmain {
+            visibility: visible;
+            background-color:rgba(255,255,255,0.8);
+            opacity: 1;
+            z-index:60;
+            top:0;
+            padding-top:10%;
+            transition: all 0.400s;
+            transition-delay: 0.370s;
+          }
+          ul {
+            position: relative;
+            list-style-type: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            li {
+              width:100%;
+              display:inline-block;
+              font-family: 'Oranienbaum', serif;
+              text-transform:uppercase;
+              font-size:30px;
+              margin-bottom:30px;
+              font-weight:400;
+              position:relative;
+              z-index:1;
+              transition: all 0.400s;
+              transition-delay: 0.370s;
+              position: relative;
+              &:after {
+                content: '';
+                position: absolute;
+                bottom: 52%;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 0;
+                height: 1px;
+                background: #222222;
+                z-index: 2;
+                transition: width .3s;
+                z-index: 1;
+              }
+              &:hover:after {
+                width: 15%;
+              }
+              &.active:after {
+                width: 15%;
+              }
+              a {
+                text-decoration: none;
+                color: #222222;
+                display: block;
+                position: relative;
+                z-index: 2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes closetop {
+  0% {
+    transform: translateY(5px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(5px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(5px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(5px) rotate(-45deg);
+  }
+}
+@keyframes closebottom {  
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(-5px) rotate(45deg);
+  }
+}

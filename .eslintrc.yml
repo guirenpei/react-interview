@@ -1,0 +1,159 @@
+parserOptions:
+  ecmaVersion: 8
+  sourceType: module
+env:
+  node: true
+  mocha: true
+  browser: true
+extends: 'eslint:recommended'
+rules:
+  indent:
+    - warn
+    - 2
+    - SwitchCase: 1
+      VariableDeclarator:
+        var: 2
+        let: 2
+        const: 3
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - warn
+    - single
+  semi:
+    - error
+    - always
+  comma-dangle:
+    - warn
+    - only-multiline
+  no-dupe-keys: error
+  no-dupe-args: error
+  use-isnan: error
+  valid-typeof: error
+  curly: error
+  default-case: error
+  eqeqeq:
+    - error
+    - allow-null
+  guard-for-in: warn
+  no-else-return: warn
+  no-fallthrough: error
+  no-floating-decimal: warn
+  no-multi-str: error
+  no-octal: error
+  no-octal-escape: error
+  no-redeclare: error
+  no-with: error
+  no-void: error
+  radix: error
+  strict: error
+  no-delete-var: error
+  array-bracket-spacing:
+    - error
+    - never
+  block-spacing: error
+  brace-style:
+    - error
+    - 1tbs
+    - allowSingleLine: true
+  comma-spacing: error
+  comma-style:
+    - error
+    - last
+  computed-property-spacing: error
+  camelcase: warn
+  key-spacing:
+    - error
+    - beforeColon: false
+      afterColon: true
+  keyword-spacing: error
+  max-params:
+    - warn
+    - 6
+  new-cap:
+    - error
+    - newIsCap: true
+      capIsNew: false
+      properties: true
+  no-array-constructor: error
+  no-spaced-func: error
+  no-whitespace-before-property: error
+  no-trailing-spaces:
+    - error
+    - skipBlankLines: true
+  operator-linebreak: off
+  space-before-blocks:
+    - error
+    - always
+  space-before-function-paren:
+    - error
+    - never
+  space-in-parens:
+    - error
+    - never
+  space-infix-ops: error
+  space-unary-ops: error
+  spaced-comment:
+    - warn
+    - always
+  semi-spacing: error
+  constructor-super: error
+  generator-star-spacing: warn
+  yield-star-spacing: warn
+  no-const-assign: error
+  no-dupe-class-members: error
+  no-this-before-super: error
+  no-var: error
+  no-console: off
+  no-unused-vars:
+    - warn
+    - vars: local
+      args: none
+  prefer-arrow-callback: warn
+  prefer-const: off
+  prefer-rest-params: warn
+  prefer-spread: warn
+  prefer-template: warn
+  template-curly-spacing:
+    - warn
+    - never
+  valid-jsdoc: off
+  no-global-assign: error
+  no-unsafe-negation: error
+  require-yield: off
+  jsx-quotes: error
+  react/display-name:
+    - error
+    - ignoreTranspilerName
+      - off
+  react/forbid-prop-types: error
+  react/jsx-boolean-value: error,
+  react/jsx-closing-bracket-location: off,
+  react/jsx-curly-spacing: error,
+  react/jsx-indent-props: off,
+  react/jsx-key: error,
+  react/jsx-max-props-per-line: off,
+  react/jsx-no-bind: error,
+  react/jsx-no-duplicate-props: error,
+  react/jsx-no-literals: off,
+  react/jsx-no-undef: error,
+  react/jsx-pascal-case: error,
+  react/jsx-sort-prop-types: off,
+  react/jsx-sort-props: off,
+  react/jsx-uses-react: error,
+  react/jsx-uses-vars: error,
+  react/no-danger: error,
+  react/no-did-mount-set-state: error,
+  react/no-did-update-set-state: error,
+  react/no-direct-mutation-state: error,
+  react/no-multi-comp: error,
+  react/no-set-state: off,
+  react/no-unknown-property: error,
+  react/prefer-es6-class: error,
+  react/prop-types: error,
+  react/react-in-jsx-scope: error,
+  react/require-extension: error,
+  react/self-closing-comp: error,
+  react/sort-comp: error,
+  react/wrap-multilines: error

@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+*.log
+bin/common/config.js
+bin/common/config.db.js
+bin/common/models/schemas
+tmp
+npm-debug.log.*
+config/webpack/public
