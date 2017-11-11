@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const config = require('../index.js');
+console.log('config.rootPath', config.rootPath);
 
 module.exports = {
     context: config.rootPath,
@@ -160,7 +161,7 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
         new HtmlWebpackPlugin({
-            template: './template/index.html'
+            template: path.resolve(config.rootPath, './template/index.html')
         }),
         new ExtractTextPlugin({
             filename: 'styles.[contenthash].css'

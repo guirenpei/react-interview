@@ -160,7 +160,7 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('development')
         }),
         new HtmlWebpackPlugin({
-            template: './template/index.html'
+            template: path.resolve(config.rootPath, './template/index.html')
         }),
         new ExtractTextPlugin({
             filename: 'styles.[contenthash].css'
