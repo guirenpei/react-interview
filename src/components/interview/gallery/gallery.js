@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { findDOMNode } from 'react-dom';
 import { Route, Link } from 'react-router-dom';
-import InfiniteScroll from 'infinite-scroll';
-import LimitedInfiniteScroll from 'react-limited-infinite-scroll'
 
 import GalleryStyle from './gallery.less';
 import Grid from '../grid.less';
@@ -46,6 +44,7 @@ class Gallery extends Component {
     });
   }
   async componentDidMount() {
+    console.log('didMount--gallery');
     await this.props.loadMore({
       current: this.state.current
     });
@@ -74,6 +73,7 @@ class Gallery extends Component {
   }
   render() {
     const images = this.props.images;
+    console.log('images', images);
     const imgs = (images || []).map((image) => ({ src: image.qiniu, alt: image.title }));
     return (
       <div className={GalleryStyle['main-wrapper']}>

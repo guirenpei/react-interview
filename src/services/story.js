@@ -1,7 +1,9 @@
 import "babel-polyfill";
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:2366';
+import { backend } from '../../config/config';
+
+axios.defaults.baseURL = backend;
 
 export async function all() {
   // console.log('service', 'all--');

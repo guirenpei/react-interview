@@ -5,13 +5,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const config = require('../index.js');
-console.log('config.rootPath', config.rootPath);
 
 module.exports = {
     context: config.rootPath,
     entry: {
         main: [
-            path.resolve(config.rootPath, './src/index.js')
+            // path.resolve(config.rootPath, './src/index.js')
+            './src/index.js'
         ]
     },
     output: {

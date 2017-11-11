@@ -1,7 +1,7 @@
 import "babel-polyfill";
 import axios from 'axios';
 
-import backend from '../../config/config';
+import { backend } from '../../config/config';
 
 axios.defaults.baseURL = backend;
 
