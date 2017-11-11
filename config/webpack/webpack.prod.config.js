@@ -11,7 +11,7 @@ module.exports = {
     context: config.rootPath,
     entry: {
         main: [
-            './src/index.js'
+            path.resolve(config.rootPath, './src/index.js')
         ]
     },
     output: {
