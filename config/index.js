@@ -4,6 +4,7 @@ let pwd = path.resolve(__dirname, '..');
 if (!pwd.includes(basename)) {
     pwd = path.resolve(pwd, basename);
 }
+console.log('pwd', pwd);
 /**
  * 服务器server以及项目的公共配置
  */
