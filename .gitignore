@@ -7,3 +7,4 @@ bin/common/models/schemas
 tmp
 npm-debug.log.*
 config/webpack/public
+config/config.js
